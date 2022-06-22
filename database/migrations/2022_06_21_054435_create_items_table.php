@@ -18,6 +18,9 @@ class CreateItemsTable extends Migration
             $table->string('name');
             $table->integer('amount');
             $table->timestamps();
+            $table->softDeletes();
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
     }
 
