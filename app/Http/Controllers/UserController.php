@@ -42,7 +42,7 @@ class UserController extends Controller
      */
     public function store(UserRequest $request)
     {
-        $request->validated();
+        // $request->validated();
 
         $data = [
             'mail_address' => $request->mail_address,
